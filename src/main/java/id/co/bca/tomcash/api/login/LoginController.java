@@ -12,6 +12,9 @@ public class LoginController
 	{
 		System.out.println("Logging in... " + login.toString());
 		
+		String envVar = System.getenv("TEST_ENV");
+		System.out.println("TEST_ENV : " + envVar);
+		
 		LoginStatus loginStatus = new LoginStatus();
 		if ("Giorno".equals(login.getInputDomain()) && "abc123".equals(login.getInputPassword())) {
 			loginStatus.setStatus("Success");
