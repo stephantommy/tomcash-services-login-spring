@@ -12,7 +12,7 @@ public class LoginController
 	{
 		System.out.println("Logging in... " + login.toString());
 		
-		String envVar = System.getenv("TEST_ENV");
+		String envVar = System.getenv().getOrDefault("TEST_ENV", "DEFAULT_VALUE");
 		System.out.println("TEST_ENV : " + envVar);
 		
 		LoginStatus loginStatus = new LoginStatus();
